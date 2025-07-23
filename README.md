@@ -11,7 +11,7 @@ Sebuah proyek web sederhana namun modern menggunakan CSS Grid untuk menciptakan 
 
 ## 📸 Preview
 
-![Preview](https://raw.githubusercontent.com/username/css-grid-elegan/main/preview.png)
+![Preview](https://github.com/RakaMaulana7/css-grid-layout/blob/main/image.png?raw=true)
 
 ## 🧱 Struktur Grid
 
