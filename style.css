@@ -1,0 +1,88 @@
+:root {
+    --primary: #0f172a;
+    --accent: #3b82f6;
+    --light: #f8fafc;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--light);
+    color: var(--primary);
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "sidebar main rightbar"
+      "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .grid-container > * {
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 20px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .grid-container > *:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px var(--shadow);
+  }
+  
+  .header {
+    grid-area: header;
+    background: var(--accent);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background: #e2e8f0;
+  }
+  
+  .main {
+    grid-area: main;
+  }
+  
+  .rightbar {
+    grid-area: rightbar;
+    background: #e0f2fe;
+  }
+  
+  .footer {
+    grid-area: footer;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "rightbar"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  }
+  
